@@ -1,0 +1,23 @@
+<template name = "addFriend">
+
+    <div class = "btn addfriend">get Facebook Friends</div>
+
+    <div class="topcoat-list">
+
+        <ul class="topcoat-list__container">
+            <div><input type="text" class="friend" placeholder="What's your friends name?" width ="300 px" required></div>
+            {{#each facebookfriend}}
+
+            <li class="topcoat-list__item">
+                <div class ="remove"></div>
+                <div >{{this.name}}</div>
+
+            </li>
+
+            {{/each}}
+
+        </ul>
+    </div>
+</template>
+
+        

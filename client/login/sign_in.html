@@ -1,0 +1,57 @@
+
+<template name="signIn">
+
+{{#if spinner}}
+    {{> spinner}}
+    {{/if}}
+
+    <div class ="loginForm">
+    {{#if loggingIn}}
+
+
+    <div class="sign-in" id="signIn">
+
+
+  <!--      <div class="btn facebook"> Sign in with Facebook</div>
+        <div class="btn linkedin"> Sign in with Linkedin</div>-->
+
+
+        <form action="/signin" class="sign-in-form" id="signInForm" method="post">
+
+                <input class = "email" type="text" name="login" id="login" placeholder="Email">
+                <input class ="password" type="password" name="password" id="password" placeholder="Password">
+
+
+
+
+
+
+
+            <input class="signIn btn btn-submit btn-medium" type="submit" value="Sign In">
+
+        </form>
+
+    </div>
+
+   <div id ="signUp">  Sign Up</div>
+
+
+        {{else}}
+
+        <div id ="backToLogIn" >  Back to login</div>
+
+
+    <div class="sign-up">
+        <form action="/sign-up" class="sign-up-form" id="signUpForm" method="post">
+            <input class="email" id="signUpEmail" name="email" placeholder="Email Address" type="text" >
+            <input class="password" id="signUpPassword" name="password" placeholder="Password" type="password">
+            <input class="password-confirm" id="signUpPasswordConfirm" name="password-confirm" placeholder="Confirm" type="password">
+            <input class="btn btn-submit btn-medium" type="submit" value ="Sign Up for Noticed">
+        </form>
+    </div>
+    <!-- end .sign-in -->
+
+    {{/if}}
+
+    </div>
+</template>

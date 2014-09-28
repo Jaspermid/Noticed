@@ -1,0 +1,23 @@
+<template name="layout">
+
+
+
+
+
+    {{> header}}
+    <div class = "all">
+    {{#if currentUser}}
+        {{> yield}}
+
+    {{else}}
+        {{> login}}
+    {{/if}}
+    </div>
+
+
+
+
+
+
+
+</template>

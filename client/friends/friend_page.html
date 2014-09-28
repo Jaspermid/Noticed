@@ -1,0 +1,45 @@
+<template name ="friendPage">
+
+
+    <div class="topcoat-list">
+
+        <ul class="topcoat-list__container">
+
+            <div id="parent">
+                <div id="inner">
+                    <span><input type="text" id="text" class="note addtonotelist" placeholder="Add new notes"></span>
+                </div>
+
+            </div>
+            {{#each this.note}}
+<div class ="workItem">
+            <li class="friendpagelist topcoat-list__item test listItem" id = "{{this}}">
+                {{#with parentname ..}}
+                <div class ="remove"> X </div>
+                <a class ="clock" href="{{pathFor 'calendar'}}" > <img src ="/clock.png"></a>
+                {{/with}}
+                <div>{{this}}</div>
+            </li>
+</div>
+
+            {{/each}}
+
+
+
+        </ul>
+    </div>
+
+
+
+
+
+
+    <a href = "/"><div class ="btn btn-default">Back</div></a>
+<div class ="camera btn btn-default">Camera</div>
+    {{#if photo}}
+    <div>
+        <img src={{photo}} />
+    </div>
+    {{/if}}
+
+</template>

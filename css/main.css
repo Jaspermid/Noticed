@@ -1,0 +1,328 @@
+h2 {
+    font-size: 18px !important;
+    top: 0px;
+}
+
+.body {
+    background-color: #3B394F !important;
+}
+
+.all {
+    background-color: #3B394F !important;
+}
+
+/*header*/
+.header {
+    width: 100%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+/*general layout*/
+.all {
+    margin-left: 0px;
+    margin-right: 0px;
+    top: 20px;
+    /* Header Height */
+    bottom: 0px;
+}
+
+/* Login */
+#signUp, #backToLogIn {
+    color: #ffe450;
+    font-style: underline;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+.sign-in, img {
+    width: 100%;
+    max-heigth: 120px;
+    bottom: 40px;
+}
+
+.facebook {
+    background-color: #3B5998 !important;
+    color: #3B5998 !important;
+}
+
+.login {
+    background-color: #3B394F;
+    margin-top: 10px;
+    width: 100%;
+    padding: 0;
+    bottom: 40px;
+    top: -20px;
+    background-image: url("backgroundimagelogin.png");
+}
+
+.filler {
+    background-image: url("backgroundimagelogin.png");
+    background-repeat: repeat-y;
+    height: 30px;
+    width: 100%;
+}
+
+.signIn {
+    padding: 0px;
+    margin-right: 0px;
+    width: 100% !important;
+    margin-bottom: 10px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.logo {
+    background-image: url("noticedlogo3.png");
+}
+
+.alert {
+    max-height: 30px;
+    font-size: 12px;
+    background-color: white;
+}
+
+#signUpForm > *, #signInForm > * {
+    margin-left: 10px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Friend List */
+list {
+    width: 100%;
+    position: relative;
+}
+
+.listItem {
+    cursor: pointer;
+    margin: 0;
+    border-bottom: 1px solid #fff;
+    border-width: 1px 0 0;
+    color: white;
+}
+
+.remove {
+    float: left;
+    margin-right: 40px;
+    display: none;
+}
+
+h2 {
+    font: 400 40px / 1.5 Helvetica, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.ioslist-wrapper {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+}
+
+.ioslist-group-container {
+    margin: 0;
+    min-height: 1px;
+    overflow: hidden;
+    padding: 24px 0 0 0;
+    position: relative;
+}
+
+/* Demo Styling */
+body {
+    font: 200 20px / 1.5 Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    margin-top: 10px;
+    background-color: black;
+    height: 100%;
+}
+
+#list1 {
+    height: 300px;
+    margin: 100px;
+    overflow: visible;
+    position: relative;
+    width: 300px;
+    zoom: 1;
+}
+
+.ioslist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ioslist li {
+    font: 100% 200 20px / 1.5 Helvetica, Verdana, sans-serif;
+    margin: 0;
+    padding: 0 0 0 12px;
+    white-space: nowrap;
+}
+.ioslist li + li {
+    border-top: 1px solid #CCC;
+}
+
+[data-ios="true"] .ioslist-group-header, [data-ios="true"] .ioslist-fake-header {
+    width: 288px;
+    /*scrollbars aren't visible in iOS devices, so make the headers wider */
+}
+
+/*addFriend */
+.addfriend {
+    width: 88%;
+    margin-top: 10px;
+}
+
+/*friendPage*/
+.note {
+    margin-top: 10px;
+}
+
+/*test*/
+#myElement {
+    background: silver;
+    height: 300px;
+    text-align: center;
+    font: 30px / 300px Helvetica, Arial, sans-serif;
+}
+
+.addfriendtolist {
+    background-color: black;
+    margin: 0;
+    width: 100%;
+    cursor: pointer;
+    margin: 0;
+    border-bottom: 1px solid #fff;
+    border-width: 1px 0 0;
+    background-color: #312F47;
+    border-radius: 0px;
+    color: white;
+}
+
+.topcoat-list {
+    border-top: 1px solid #9daca9;
+    border-bottom: 1px solid #fff;
+    background-color: #e5e9e8;
+}
+
+.topcoat-list__header {
+    padding: 4px 20px;
+    font-size: 0.9em;
+    font-weight: 400;
+    background-color: #d2d6d6;
+    color: white;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+.topcoat-list__container {
+    border-top: 1px solid #9daca9;
+    color: white;
+    background-color: #312F47;
+}
+
+.topcoat-list__item {
+    padding: 1.25rem;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #9daca9;
+    font-size: 18px;
+}
+.topcoat-list__item:first-child {
+    border-top: 1px solid #d6dcdb;
+}
+
+/*footer */
+.footer {
+    heigth: 20px;
+    background-image: url("footerbackground.png");
+}
+
+.loginform {
+    background-image: url("backgroundimagelogin.png");
+}
+
+a {
+    color: white !important;
+}
+
+#inner {
+    display: table;
+    width: 100%;
+}
+
+span {
+    display: table-cell;
+    padding: 0px;
+}
+
+#text {
+    width: 100%;
+    heigth: 100%;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+#submit {
+    display: table-cell;
+}
+
+/*friendpage */
+.friendpagelist {
+    font-size: 14px;
+}
+
+.clock {
+    background-image: url("clock.png");
+    float: right !important;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: white !important;
+}
+
+/*Calender */
+.whitetext {
+    color: white;
+}
+
+.fc-button-today {
+    display: none;
+}
+
+.red {
+    background-color: red;
+}

@@ -1,0 +1,37 @@
+<template name ="friendsList">
+
+   <!-- <div class = "btn logOut signIn">Log Out</div>-->
+  <!-- <div id ="test">Swipe me</div>-->
+
+
+    <!--<a href="{{pathFor 'addFriend'}}"> <div class = "btn addfacebookfriends">add Facebook Friends</div></a>-->
+
+    <div class="topcoat-list">
+
+        <ul class="topcoat-list__container">
+
+            <div id="parent">
+                <div id="inner">
+                    <span><input type="text" id="text" class="friend addfriendtolist" placeholder="Add new friends"></span>
+                </div>
+
+            </div>
+            <div></div>
+            {{#each friend}}
+            <li class="topcoat-list__item test listItem" id = "{{this._id}}">
+               <!-- <div class ="remove"> X </div>-->
+                <div class ="remove">x</div><a href="{{pathFor 'friendPage'}}">{{this.name}}</a>
+            </li>
+            {{/each}}
+
+        </ul>
+    </div>
+
+
+
+
+ <!--   <a href = "{{pathFor 'addFriend'}}"><div class ="btn btn-large addfriend">Add Friend</div></a>-->
+
+
+
+</template>

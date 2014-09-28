@@ -1,0 +1,41 @@
+<template name="login">
+
+    <div class ="loginform">
+
+<div class = center>
+<img src ="noticedlogo5.png"></div>
+
+
+
+
+<div class ="login">
+
+
+
+    {{> alert}}
+    {{#unless resetPassword}}
+        {{#unless currentUser}}
+            {{#unless showForgotPassword}}
+    {{> signIn}}
+
+    {{else}}
+        {{> forgotPassword}}
+    {{/unless}}
+        {{else}}
+    {{> signOut}}
+        {{/unless}}
+            {{else}}
+                {{> resetPassword}}
+            {{/unless}}
+
+
+</div>
+
+    </div>
+
+    {{> footer}}
+</template>
+
+
+
+
