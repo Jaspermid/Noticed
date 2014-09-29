@@ -16,12 +16,19 @@
             <li class="friendpagelist topcoat-list__item test listItem" id = "{{this}}">
                 {{#with parentname ..}}
                 <div class ="remove"> X </div>
-                <a class ="clock" href="{{pathFor 'calendar'}}" > <img src ="/clock.png"></a>
+                <a class ="clock" href="{{pathFor 'calendar'}}" > <img src ="/clock.png"></a> <a class ="cameraicon"><img src ="/camera2.png"></a>
+
                 {{/with}}
                 <div>{{this}}</div>
             </li>
 </div>
 
+            {{/each}}
+
+            {{#each this.image}}
+            <div>
+                <img src={{this}} />
+            </div>
             {{/each}}
 
 
@@ -36,10 +43,6 @@
 
     <a href = "/"><div class ="btn btn-default">Back</div></a>
 <div class ="camera btn btn-default">Camera</div>
-    {{#if photo}}
-    <div>
-        <img src={{photo}} />
-    </div>
-    {{/if}}
+
 
 </template>

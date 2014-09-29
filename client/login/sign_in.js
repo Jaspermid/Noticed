@@ -31,7 +31,7 @@ Template.signIn.events({
                 if (err) {
                     Session.set('alert', 'We\'re sorry but these credentials are not valid.');
                 } else {
-                    Sesson.set('alert', 'Welcome back New Meteorite!');
+                    //Sesson.set('alert', 'Welcome back New Meteorite!');
                 }
             });
         }
