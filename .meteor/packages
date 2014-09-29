@@ -7,9 +7,9 @@ meteor-platform
 jquery
 iron:router
 bootstrap
-appcache
 accounts-password
 accounts-base
 mdg:camera
 accounts-ui
+
 
