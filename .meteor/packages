@@ -7,6 +7,4 @@ meteor-platform
 jquery
 iron:router
 bootstrap
-appcache
 accounts-password
-
