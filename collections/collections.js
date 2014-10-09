@@ -3,3 +3,4 @@
  */
 Friends = new Meteor.Collection('friends');
 Facebooklist = new Meteor.Collection('facebooklist')
+Images = new Meteor.Collection('images')

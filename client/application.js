@@ -6,3 +6,4 @@ Meteor.subscribe('friends',function(){
 });
 Meteor.subscribe('facebooklist');
 
+Meteor.subscribe('images');

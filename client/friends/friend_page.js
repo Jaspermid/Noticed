@@ -36,7 +36,7 @@ Template.friendPage.helpers ({
 
 
         photo: function () {
-           return (Friends.findOne({'_id': Session.get("friendid")}).image)
+           return (Images.find({'friendid': Session.get('friendid') }))
            //return Session.get("photo");
         }
     })
@@ -202,40 +202,35 @@ Template.friendPage.events ({
 
     },
 
-    
 
-    'click .camera': function () {
+    'click .cameraicon': function () {
 
-        var cameraOptions = {
-            width: 800,
-            height: 600
-        };
-        var parentID = Session.get('friendid');
-
-
-
-
-       MeteorCamera.getPicture(cameraOptions, function (error, data) {
+         var cameraOptions = {
+         width: 800,
+         height: 600
+         };
+         var parentID = Session.get('friendid');
 
 
 
 
-
-           Friends.update({
-                   _id: parentID
-               },
-               {
-                   $set: {
-                       image: [data]
-
-                   }
-               });
-        })
+         MeteorCamera.getPicture(cameraOptions, function (error, data) {
 
 
-        console.log(Session.get("photo"))
+
+         Images.insert({
+             "userid": Meteor.user()._id,
+             "image": data,
+             "friendid":Session.get ("friendid")
+         })
+
+         })
 
 
-    }
+         console.log(Session.get("photo"))
+
+
+         }
+
 
 })

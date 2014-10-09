@@ -12,3 +12,9 @@ Meteor.publish('facebooklist', function() {
     user = this.userId
     return Facebooklist.find({'userid': user})
 });
+
+Meteor.publish('images', function() {
+    user = this.userId
+    return Images.find({'userid': user})
+});
+

@@ -36,3 +36,21 @@ Facebooklist.allow({
     }
 
 })
+
+Images.allow({
+    insert: function (userId) {
+        // the user must be logged in, and the document must be owned by the user
+        return (userId != null);
+    },
+
+    remove: function (userId) {
+        // the user must be logged in, and the document must be owned by the user
+        return (userId != null);
+    },
+
+    update: function (userId) {
+        // the user must be logged in, and the document must be owned by the user
+        return (userId != null);
+    }
+
+})
