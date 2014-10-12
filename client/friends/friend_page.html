@@ -7,7 +7,7 @@
 
             <div id="parent">
                 <div id="inner">
-                    <span><input type="text" id="text" class="note addtonotelist" placeholder="Add new notes"><!--<a class ="cameraicon"><img src ="/camera2.png"></a>--></span>
+                    <span><input type="text" id="text" class="note addtonotelist" placeholder="Add new notes"><a class ="cameraicon"><img src ="/camera2.png"></a></span>
                 </div>
 
             </div>
@@ -16,7 +16,7 @@
             <li class="friendpagelist topcoat-list__item test listItem" id = "{{this}}">
                 {{#with parentname ..}}
                 <div class ="remove"> X </div>
-               <!-- <a class ="clock" href="{{pathFor 'calendar'}}" > <img src ="/clock.png"></a> <a class ="cameraicon"><img src ="/camera2.png"></a>-->
+                <a class ="clock" href="{{pathFor 'calendar'}}" > <img src ="/clock.png"></a> <a class ="cameraicon"><img src ="/camera2.png"></a>
 
                 {{/with}}
                 <div>{{this}}</div>
@@ -24,14 +24,14 @@
 </div>
 
             {{/each}}
-<!--
+
             {{#each photo}}
             <div>
                 <div class ="workItem">
                     <li class="friendpagelist topcoat-list__item test listItem" id = "{{this}}">
 
                         <div class ="remove"> X </div>
-                        <a class ="clock" href="{{this.image}}" > <img src ="/clock.png"></a> <a class ="cameraicon" href ="{{this.image}}"><img src ="/camera2.png"></a>
+                        <a class ="clock" href="{{pathFor 'picture'}}" > <img src ="/clock.png"></a> <a class ="cameraicon" href ="{{this.image}}"><img src ="/camera2.png"></a>
 
 
                         <div>{{this}}</div>
@@ -42,7 +42,7 @@
             </div>
             {{/each}}
 
--->
+
 
         </ul>
     </div>
@@ -52,8 +52,8 @@
 
 
 
-    <a href = "/"><div class ="btn btn-default signIn">Back</div></a>
-<!--<div class ="camera btn btn-default">Camera</div>-->
+    <a href = "/"><div class ="btn btn-default">Back</div></a>
+<div class ="camera btn btn-default">Camera</div>
 
 
 </template>
