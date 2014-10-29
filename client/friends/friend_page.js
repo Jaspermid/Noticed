@@ -44,7 +44,7 @@ Template.friendPage.helpers ({
 
 Template.friendPage.events ({
     "swipe .test": function (e, phase, direction, distance, duration, fingerCount) {
-
+        
 
         if (direction == "left" && distance > 100) {
             var parentID = Session.get('friendid');
@@ -120,6 +120,8 @@ Template.friendPage.events ({
 
 
     "blur .note": function (e) {
+        console.log (e)
+
         if ($('.note').val().trim() != '') {
             notearray = this.note
             notearray.push($('.note').val())
@@ -211,17 +213,21 @@ Template.friendPage.events ({
          };
          var parentID = Session.get('friendid');
 
-
-
-
          MeteorCamera.getPicture(cameraOptions, function (error, data) {
 
+             if ($('.note').val().trim() != '') {
+                 note = $('.note').val()
 
+             }
+             else {
+                 note = "test"
+             }
 
          Images.insert({
              "userid": Meteor.user()._id,
              "image": data,
-             "friendid":Session.get ("friendid")
+             "friendid":Session.get ("friendid"),
+             "note": "Photo note"
          })
 
          })
@@ -230,7 +236,13 @@ Template.friendPage.events ({
          console.log(Session.get("photo"))
 
 
-         }
+         },
+    'click .cameraicon2': function (e){
+
+
+
+        Session.set ("image", this.image)
+    }
 
 
 })

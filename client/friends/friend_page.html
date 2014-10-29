@@ -11,12 +11,13 @@
                 </div>
 
             </div>
+
             {{#each this.note}}
 <div class ="workItem">
             <li class="friendpagelist topcoat-list__item test listItem" id = "{{this}}">
                 {{#with parentname ..}}
                 <div class ="remove"> X </div>
-                <a class ="clock" href="{{pathFor 'calendar'}}" > <img src ="/clock.png"></a> <a class ="cameraicon"><img src ="/camera2.png"></a>
+                <a class ="clock" href="{{pathFor 'calendar'}}" > <img src ="/clock.png"></a>
 
                 {{/with}}
                 <div>{{this}}</div>
@@ -31,10 +32,10 @@
                     <li class="friendpagelist topcoat-list__item test listItem" id = "{{this}}">
 
                         <div class ="remove"> X </div>
-                        <a class ="clock" href="{{pathFor 'picture'}}" > <img src ="/clock.png"></a> <a class ="cameraicon" href ="{{this.image}}"><img src ="/camera2.png"></a>
+                        <a class ="cameraicon2" href ="{{pathFor 'picture'}}"><img src ="/camera2.png"></a>
 
 
-                        <div>{{this}}</div>
+                        <div>{{this.note}}</div>
                     </li>
                 </div>
 
