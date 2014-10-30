@@ -33,7 +33,7 @@ h2 {
 }
 
 /* Login */
-#signUp, #backToLogIn, #forgotPasswordButton {
+#signUp, #backToLogIn, #forgotPasswordButton, .center {
     color: #ffe450;
     font-style: underline;
     font-size: 14px;
@@ -69,7 +69,7 @@ h2 {
     width: 100%;
 }
 
-.signIn {
+.signIn, .sent {
     padding: 0px;
     margin-right: 0px;
     width: 100% !important;
@@ -386,6 +386,7 @@ span {
 
 }
 
-.sent {
-    margin: 0 auto !important;
+.test {
+    margin-left: auto ;
+    margin-right: auto ;
 }
