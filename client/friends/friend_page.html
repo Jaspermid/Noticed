@@ -29,7 +29,7 @@
             {{#each photo}}
             <div>
                 <div class ="workItem">
-                    <li class="friendpagelist topcoat-list__item test listItem" id = "{{this}}">
+                    <li class="friendpagelist topcoat-list__item test listItem photo2" id = "{{this.note}}">
 
                         <div class ="remove"> X </div>
                         <a class ="cameraicon2" href ="{{pathFor 'picture'}}"><img src ="/camera2.png"></a>
@@ -54,7 +54,7 @@
 
 
     <a href = "/"><div class ="btn btn-default">Back</div></a>
-<div class ="camera btn btn-default">Camera</div>
+
 
 
 </template>

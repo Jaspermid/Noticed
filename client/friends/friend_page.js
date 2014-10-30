@@ -44,32 +44,47 @@ Template.friendPage.helpers ({
 
 Template.friendPage.events ({
     "swipe .test": function (e, phase, direction, distance, duration, fingerCount) {
-        
+        console.log (e)
+        console.log ($(event.target))
+        console.log ($(event.currentTarget).hasClass('photo2'))
+
+
 
         if (direction == "left" && distance > 100) {
-            var parentID = Session.get('friendid');
-            var index = ($('.test').index(e.target))
 
-            if (index == -1) {
-                index = $(e.target).parent().index('.test')
+
+            if ($(event.currentTarget).hasClass('photo2')){
+                Images.remove (this._id)
 
             }
 
-            notearray = (Friends.findOne({'_id': parentID}).note)
-            notearray.splice(index, 1);
-
-            Friends.update({
-                    _id: parentID
-                },
-                {
-                    $set: {
-                        note: notearray,
-                    }
-                });
-
-            console.log(parentID);
+            else {
+                // alert ("nohoto")
 
 
+                var parentID = Session.get('friendid');
+                var index = ($('.test').index(e.target))
+
+                if (index == -1) {
+                    index = $(e.target).parent().index('.test')
+
+                }
+
+                notearray = (Friends.findOne({'_id': parentID}).note)
+                notearray.splice(index, 1);
+
+                Friends.update({
+                        _id: parentID
+                    },
+                    {
+                        $set: {
+                            note: notearray,
+                        }
+                    });
+
+                console.log(parentID);
+
+            }
         }
     },
 
@@ -215,6 +230,8 @@ Template.friendPage.events ({
 
          MeteorCamera.getPicture(cameraOptions, function (error, data) {
 
+             console.log (error)
+
              if ($('.note').val().trim() != '') {
                  note = $('.note').val()
 
@@ -222,14 +239,14 @@ Template.friendPage.events ({
              else {
                  note = "test"
              }
-
-         Images.insert({
-             "userid": Meteor.user()._id,
-             "image": data,
-             "friendid":Session.get ("friendid"),
-             "note": "Photo note"
-         })
-
+    if (!error) {
+        Images.insert({
+            "userid": Meteor.user()._id,
+            "image": data,
+            "friendid": Session.get("friendid"),
+            "note": "Photo note"
+        })
+    }
          })
 
 
