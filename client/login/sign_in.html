@@ -36,6 +36,8 @@
    <div id ="signUp">  Sign Up</div>
 
 
+        <div id ="forgotPasswordButton">Forgot Password</div>
+
         {{else}}
 
         <div id ="backToLogIn" >  Back to login</div>
@@ -52,6 +54,20 @@
     <!-- end .sign-in -->
 
     {{/if}}
+{{#if forgotPassword}}
+
+        <div class="forgot-password" id="forgotPassword">
+            <form action="/forgot" class="forgot-password-form" id="forgotPasswordForm" method="post">
+                <input class="email" id="forgotPasswordEmail" type="text" name="email" placeholder="Email Address">
+                <input class="btn btn-submit btn-medium sent" type="submit" value="Send">
+            </form>
+        </div>
+
+        {{/if}}
+
 
     </div>
+
+
+
 </template>

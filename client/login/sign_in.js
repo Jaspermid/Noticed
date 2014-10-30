@@ -10,6 +10,11 @@ Template.signIn.helpers ({
     loggingIn: function(){
         return Session.get('loggingIn')
     },
+    forgotPassword: function () {
+
+        return Session.get('forgotPassword')
+    },
+
     spinner: function(){
         return Session.get('spinner')
     }
@@ -101,6 +106,33 @@ Template.signIn.events({
         Session.set('alert', false)
     },
 
+    'click #forgotPasswordButton': function() {
+        Session.set('alert', false)
+        Session.set('forgotPassword', !Session.get('forgotPassword'))
+    },
+
+
+    'submit #forgotPasswordForm': function(e, t) {
+        e.preventDefault();
+
+        var forgotPasswordForm = $(e.currentTarget),
+            email = trimInput(forgotPasswordForm.find('#forgotPasswordEmail').val().toLowerCase());
+
+        if (isNotEmpty(email) && isEmail(email)) {
+            Accounts.forgotPassword({email: email}, function(err) {
+                if (err) {
+                    if (err.message === 'User not found [403]') {
+                        Session.set('alert', 'This email does not exist.');
+                    } else {
+                        Session.set('alert', 'We\'re sorry but something went wrong.');
+                    }
+                } else {
+                    Session.set('alert', 'Email Sent. Please check your mailbox to reset your password.');
+                }
+            });
+        }
+        return false;
+    },
 
 
 

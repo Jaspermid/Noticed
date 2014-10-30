@@ -33,7 +33,7 @@ h2 {
 }
 
 /* Login */
-#signUp, #backToLogIn {
+#signUp, #backToLogIn, #forgotPasswordButton {
     color: #ffe450;
     font-style: underline;
     font-size: 14px;
@@ -92,12 +92,18 @@ h2 {
     background-color: white;
 }
 
-#signUpForm > *, #signInForm > * {
+#signUpForm > *, #signInForm > *, #forgotPasswordEmail {
     margin-left: 10px;
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.forgot-password-form, .forgotPassword, #forgotPassword {
+margin: auto;
+    padding: 0 !important;
+    margin-top: 10px;
 }
 
 /* Friend List */
@@ -378,4 +384,8 @@ span {
     margin: 0 auto;
    padding-top:20px
 
+}
+
+.sent {
+    margin: 0 auto !important;
 }
